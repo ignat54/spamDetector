@@ -72,7 +72,7 @@ X_test_vect.columns = X_test_vect.columns.astype(str)
 
 st.title("Spam Detection App")
 
-user_input = st.text_input("Enter a message:")
+user_input = st.text_input("Enter a message in English:")
 input_data = pd.DataFrame({'body_text': [user_input], 'body_len': [len(
     user_input) - user_input.count(" ")], 'punct%': [count_punct(user_input)]})
 input_tfidf = tfidf_vect_fit.transform(input_data['body_text'])
