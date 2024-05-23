@@ -10,7 +10,7 @@ import nltk
 import re
 import string
 
-nltk.download('stopwords')
+stopwords = nltk.corpus.stopwords.words('english')
 ps = nltk.PorterStemmer()
 data = pd.read_csv("SMSSpamCollection", sep='\t')
 data.columns = ['label', 'body_text']
